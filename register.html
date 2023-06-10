@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="register.css">
+        <link rel="icon" href="favicon.png">
+        <script defer src="register.js"></script>
+
+        <title>Register | Abeer MC</title>
+
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <header>
+            <h1 id="nav-title"><a href="index.html">Abeer Medical Center</a></h1>
+            <nav>
+                <ul>
+                  <li><a href="index.html">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+            
+            <div class="container">
+               <label for="show" class="close-btn fas fa-times" title="close"></label>
+               <div class="text">Register</div>
+
+               <form action="#">
+                  <div class="data">
+                     <label>Full Name</label>
+                     <input id="user-name" type="text" required>
+                  </div>
+
+                  <div class="data">
+                    <label>ID</label>
+                    <input type="number" required>
+                 </div>
+
+                  <div class="data">
+                     <label>Email</label>
+                     <input type="email" required>
+                  </div>
+
+                  <div class="data">
+                    <label>Phone Number</label>
+                    <input type="number" required>
+                 </div>
+
+                  <div class="data">
+                     <label>Password</label>
+                     <input id="pwd" type="password" required>
+                  </div>
+
+                  <div class="data">
+                     <label>Confirm Password</label>
+                     <input id="co-pwd" type="password" required>
+                  </div>
+
+                  <div class="btn">
+                     <div class="inner"></div>
+                     <button type="submit" onclick="passwordConfirmation();">Register</button>
+                  </div>
+               </form>
+            </div>
+
+            <footer>
+                <p> © Abeer Medical Group 2023 All Rights Reserved.</p>
+            </footer>
+    </body>
+</html>

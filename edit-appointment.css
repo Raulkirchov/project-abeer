@@ -1,0 +1,331 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My styling */
+body{
+    font-family: 'Anton', sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #055b6b;
+    box-shadow: 0 1px 8px #ddd;
+}
+
+#nav-title {
+    margin-right: auto;
+    color: whitesmoke;
+    font-size: 1.5em;
+}
+
+header li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+
+header a:hover {
+    color: #96aaa8;
+}
+
+.account-name{
+    color: whitesmoke;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|PT+Sans');
+
+:root {
+  --color-primary: hsl(203, 100%, 38%);
+  --color-text:  hsl(203, 30%, 15%);
+  --color-background: hsl(203, 100%, 98%);
+  --color-border: hsl(203, 33%, 83%);;
+  --color-white: #fff;
+}
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-size: 1rem;
+}
+
+.table {
+  background-color: var(--color-white);
+  width: 100%;
+  border-radius: 4px;
+  border-collapse: collapse;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 67, 115, 0.2);
+}
+
+.table__header {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+.table__link {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.table__row {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table__row--last {
+  border-bottom: 0;
+}
+
+.table__cell {
+  padding: 1rem 1.5rem;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-font-mono {
+  font-family: 'PT Mono', monospace;
+}
+
+.btn {
+  background-color: transparent;
+  box-shadow: 0 0 0 1px var(--color-primary) inset;
+  text-align: center;
+  color: var(--color-primary);
+  display: inline-block;
+  margin: 0;
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 650px) {
+
+  html {
+    font-size: 14px;
+  }
+
+  .table__header {
+    display: none;
+  }
+
+  .table__row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .table__cell {
+    padding: 0;
+  }
+
+  .table__account {
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  .table__account-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table__account-number {
+    order: 2;
+    font-size: 12px;
+    padding-top: 0.25rem;
+  }
+
+  .table__balance {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 0.75rem;
+    padding-top: 0.125rem;
+  }
+
+  .table__balance::before {
+    content: "Balance: ";
+  }
+
+  .table__available {
+    grid-column: 2;
+    grid-row: 1;
+    padding-bottom: 0.125rem;
+  }
+
+  .table__limit {
+    display: none;
+  }
+
+  .table__transfer {
+    grid-column: 3;
+    grid-row: span 2;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+}
+#popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: rgba(50, 50, 50, 0.9);
+}
+#form {
+  position: absolute;
+  background-color: #f5f5f5;
+  border: 1px solid #212121;
+  border-radius: 2px;
+  padding: 20px;
+  width: 300px;
+  left: 50%;
+  top: 10%;
+  margin-left: -150px;
+}
+input {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+#close {
+
+  font-weight: bold;
+  margin-left: 270px;
+  margin-top: -19px;
+  margin-bottom: 30px;
+  width: 30px;
+  height: 27px;
+}
+
+p1 {
+  float: left;
+  margin-left: 30px;
+}
+.cont {
+  background-color: #e3f2fd;
+  border-radius: 2px;
+  padding: 20px 50px;
+  width: 350px;
+  margin: 10px auto 10px auto;
+  text-align: left;
+  overflow: auto;
+}
+
+#add {
+  margin: 10px;
+}
+
+.btnss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.btnss button {
+  background: rgb(177, 176, 176);
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  margin-top: 15px;
+}
+
+.btnss .del-btn{
+  background: red;
+  color: black;
+}
+
+footer{
+  background-color: #055b6b;
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+  margin-top: 500px;
+}

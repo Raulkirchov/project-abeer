@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.png">
+        <link rel="stylesheet" href="edit-appointment.css">
+        <script src="edit-appointment.js"></script>
+
+
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet"> 
+        
+        <title>Edit Appointment | Abeer MC</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="nav-title"><a href="logged-in.html">Abeer Medical Center</a></h1>
+            <nav>
+                <p class="account-name">Hello, Khalid</p>
+            </nav>
+        </header>
+
+        <div class="table__wrap">
+            <table class="table">
+              <thead class="table__header">
+                <tr class="table__row">
+                  <th class="table__cell u-text-left">Appointment No</th>
+                  <th class="table__cell u-text-right">Department</th>
+                  <th class="table__cell u-text-right">Date</th>
+                  <th class="table__cell u-text-right">Time</th>
+                  <th></th>
+                </tr>
+              </thead>
+          
+              <tbody>
+          
+                <tr class="table__row">
+                  <td class="table__account table__cell">
+                    <a href="#" class="table__account-content table__link table__link"><span class="table__account-number">13141-</span> <span class="table__account-name">Khalid</span>
+                    </a>
+                  </td>
+                  <td class="table__balance table__cell u-text-right u-font-mono"><span class="num_negative"> Orthopedic </span></td>
+                  <td class="table__limit table__cell u-text-right u-font-mono">05/20/2023</td>
+                  <td class="table__available table__cell u-text-right u-font-mono">1:35 AM</td>
+                  <td class="table__transfer table__cell u-text-center"><button id="edit" onclick="show()">Edit</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="popup">
+            <form id="form">
+                <button type="button" id="close" onclick="hide()">X</button>
+        
+                <div class="data">
+                   <label>Date</label>
+                   <input type="date" id="date" value = "2023-05-20" required>
+                </div>
+        
+                <br>
+        
+                <div class="data">
+                   <label>Time</label>
+                   <input type="time" value="01:35" required>
+                </div>
+        
+                <br>
+        
+                <div class="data">
+                 <label>Department</label>
+                 <select class="custom-select" name="format" id="format">
+                     <option>Choose a department</option>
+                     <option>Cardiology</option>
+                     <option>Urology</option>
+                     <option>Neurology</option>
+                     <option>General surgery</option>
+                     <option>Medicine</option>
+                     <option>Oncology</option>
+                     <option>Emergency room</option>
+                     <option>Nephrology</option>
+                     <option selected >Orthopedic</option>
+                  </select>
+              </div>
+        
+              <br>
+        
+              <div class="data">
+                 <label>Symptoms</label><br>
+                 <textarea rows="2" cols="40" required></textarea>
+              </div>
+        
+        
+              <div class="btnss">
+                <button>Update</button>
+                <button class="del-btn">Cancel</button>
+              </div>
+        
+           </form>
+        </div>
+
+        <footer>
+          <p> © Abeer Medical Group 2023 All Rights Reserved.</p>
+      </footer>
+    </body>
